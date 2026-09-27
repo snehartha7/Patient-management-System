@@ -6,14 +6,14 @@ patient = {}
 def add_patient(name,blood_group,):
     patient[name] = blood_group
     print(f"Added {name} with blood group {blood_group}.")
-    
-def update_patient(name,blood_group,):
-    if name in patient:
+
+def update_student(name,blood_group):    
+    if name in patient :
         patient[name] = blood_group
-        print("Update patient ",name)
+        print(f"Updated {name} to grade {blood_group}")
     else:
-        print(f"{name} not found.")
-    
+        print(f"Student {name} not found.")
+        
 def get_patient(name):
     if name in patient:
         print(f"{name}: {patient[name]}")
@@ -45,7 +45,7 @@ def main():
         print("2. Get Patient")
         print("3. Delete patient")
         print("4. Update Patient")
-        print("5. Display all students")
+        print("5. Display all patients")
         print("6. Exit")
             
         print()
